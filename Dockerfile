@@ -34,14 +34,14 @@ RUN apk --no-cache add --virtual=build-deps \
 		libmicrohttpd-dev=${LIBMICROHTTPD_DEV_VERSION} && \
 	git config --global advice.detachedHead false && \
 	git clone --branch ${MOTION_VERSION} --depth 1 https://github.com/Motion-Project/motion.git && \
-	cd motion ; \
+	cd motion && \
 	autoreconf -fiv && \
 	./configure && \
 	make clean && \
 	make && \
 	make install && \
-	cd .. ; \
-	rm -rf motion ; \
+	cd .. && \
+	rm -rf motion && \
 	apk del build-deps
 
 ARG TZDATA_VERSION=2019c-r0
