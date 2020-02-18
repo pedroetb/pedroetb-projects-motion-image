@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+  motion:
+    image: ${IMAGE_NAME:-pedroetb/motion}:${IMAGE_TAG:-latest}
+    build:
+      context: ${BUILD_CONTEXT:-.}
+      dockerfile: ${DOCKERFILE:-Dockerfile}
+      args:
+        MOTION_VERSION:
+        AUTOCONF_VERSION:
+        AUTOMAKE_VERSION:
+        BUILD_BASE_VERSION:
+        PKGCONF_VERSION:
+        LIBTOOL_VERSION:
+        LIBZIP_DEV_VERSION:
+        LIBJPEG_TURBO_DEV_VERSION:
+        FFMPEG_DEV_VERSION:
+        LIBWEBP_DEV_VERSION:
+        GETTEXT_DEV_VERSION:
+        GIT_VERSION:
+        LIBMICROHTTPD_DEV_VERSION:
+        TZDATA_VERSION:
+        CA_CERTIFICATES_VERSION:
+        IMAGEMAGICK_VERSION:
+        FFMPEG_VERSION:
+        X264_VERSION:
+        WGET_VERSION:
