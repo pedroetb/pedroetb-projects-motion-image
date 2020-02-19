@@ -17,6 +17,7 @@ ARG BUILD_BASE_VERSION=0.5-r1
 ARG PKGCONF_VERSION=1.6.3-r0
 ARG LIBTOOL_VERSION=2.4.6-r7
 ARG LIBZIP_VERSION=1.5.2-r0
+ARG LINUX_HEADERS_VERSION=4.19.36-r0
 ARG GIT_VERSION=2.24.1-r0
 RUN apk --no-cache add --virtual=build-deps \
 		autoconf=${AUTOCONF_VERSION} \
@@ -30,6 +31,7 @@ RUN apk --no-cache add --virtual=build-deps \
 		libwebp-dev=${LIBWEBP_VERSION} \
 		gettext-dev=${GETTEXT_VERSION} \
 		libmicrohttpd-dev=${LIBMICROHTTPD_VERSION} \
+		linux-headers=${LINUX_HEADERS_VERSION} \
 		git=${GIT_VERSION} && \
 	git config --global advice.detachedHead false && \
 	git clone --branch ${MOTION_VERSION} --depth 1 https://github.com/Motion-Project/motion.git && \

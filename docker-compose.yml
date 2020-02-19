@@ -19,6 +19,7 @@ services:
         PKGCONF_VERSION:
         LIBTOOL_VERSION:
         LIBZIP_VERSION:
+        LINUX_HEADERS_VERSION:
         GIT_VERSION:
         MUSL_VERSION:
         BUSYBOX_VERSION:
